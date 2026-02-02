@@ -1,16 +1,16 @@
-name: Hello World 
+name: Hello World
 
 on:
   push:
-    branch:
-      -main
+    branches:
+      - main
   pull_request:
-    branch: [main]
-    types: [open, synchronize]
+    branches: [main]
+    types: [opened, synchronize]
 
 jobs:
   hello_world_job:
-    run-on: ubuntu-20.04
+    runs-on: ubuntu-20.04
     steps:
       - name: Say Hello
-        run: echo "Hello World"
+        run: echo "Hello World!"
